@@ -4,7 +4,7 @@ class SimpleSitemapPlugin extends BasePlugin
 {
 	public function getName()
 	{
-		return 'SimpleSitemap';
+		return 'Simple Sitemap';
 	}
 
 	public function getVersion()
