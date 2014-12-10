@@ -1,7 +1,6 @@
 <?php namespace Craft;
 
-
-class SiteMapperController extends BaseController
+class SimpleSitemapController extends BaseController
 {
 	protected $allowAnonymous = true;
 

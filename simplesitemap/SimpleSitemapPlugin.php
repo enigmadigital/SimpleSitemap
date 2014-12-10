@@ -1,11 +1,10 @@
 <?php namespace Craft;
 
-
-class SiteMapperPlugin extends BasePlugin
+class SimpleSitemapPlugin extends BasePlugin
 {
 	public function getName()
 	{
-		return 'SiteMapper';
+		return 'SimpleSitemap';
 	}
 
 	public function getVersion()
@@ -26,7 +25,7 @@ class SiteMapperPlugin extends BasePlugin
 	public function registerSiteRoutes()
 	{
 		return array(
-			'sitemap.xml' => array('action' => 'siteMapper/index'),
+			'sitemap.xml' => array('action' => 'simpleSitemap/index'),
 		);
 	}
 }
