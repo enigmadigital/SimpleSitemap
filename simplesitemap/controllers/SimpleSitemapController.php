@@ -14,12 +14,13 @@ class SimpleSitemapController extends BaseController
 		$criteria = craft()->elements->getCriteria(ElementType::Entry);
 		$criteria->limit = null;
 
-		foreach ($criteria as $entry)
-		{
-			$url = $xml->addChild('url');
-			$url->addChild('loc', $entry->url);
-			$url->addChild('lastmod', $entry->dateUpdated->format(\DateTime::W3C));
-			$url->addChild('priority', $entry->uri == '__home__' ? 0.75 : 0.5);
+		foreach ($criteria as $entry) {
+			if($entry->url) {
+				$url = $xml->addChild('url');
+				$url->addChild('loc', $entry->url);
+				$url->addChild('lastmod', $entry->dateUpdated->format(\DateTime::W3C));
+				$url->addChild('priority', $entry->uri == '__home__' ? 0.75 : 0.5);
+			}
 		}
 
 		HeaderHelper::setContentTypeByExtension('xml');
