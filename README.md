@@ -16,5 +16,10 @@ only a very naîve value for priority: 0.75 for the home page, 0.5 for all other
 
 ## Updates
 
+* 1.1.0
+	* Add excludeIds config setting
+  	'sitemap' => array(
+          'excludeIds' => array(342, 339)
+     	),
 * 1.0.0
 	* Initial release!
